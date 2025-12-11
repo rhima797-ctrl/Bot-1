@@ -11,7 +11,7 @@ bot = telebot.TeleBot(BOT_TOKEN)
 REQUIRED_CHANNELS = ["@dd_fft", "@nn_ccni"]
 
 EPISODES = {
-    "Midterm": {
+    "Mimgg": {
         "1": "FILE_ID_EP1",
         "2": "FILE_ID_EP2",
         "3": "FILE_ID_EP3"
