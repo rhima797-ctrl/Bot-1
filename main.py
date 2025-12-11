@@ -90,9 +90,6 @@ def show_series_menu(chat_id):
         keyboard.add(
             InlineKeyboardButton(series_name,
                                  callback_data=f"series_{series_name}"))
-    keyboard.add(
-        InlineKeyboardButton(f"👥 عدد المستخدمين: {get_user_count()}",
-                             callback_data="show_count"))
     bot.send_message(chat_id, "📺 اختر المسلسل:", reply_markup=keyboard)
 
 
@@ -131,11 +128,6 @@ def callback(call):
             bot.answer_callback_query(call.id,
                                       "❌ لسه مشتركتش في كل القنوات!",
                                       show_alert=True)
-        return
-
-    if data == "show_count":
-        bot.send_message(call.message.chat.id,
-                         f"👥 عدد المستخدمين الحاليين: {get_user_count()}")
         return
 
     if data.startswith("series_"):
